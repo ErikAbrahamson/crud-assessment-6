@@ -1,0 +1,22 @@
+{
+  "development": {
+    "database": "crud-hats",
+    "host": "127.0.0.1",
+    "port": "5432",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "erikabrahamson",
+    "password": "900411",
+    "database": "crud-hats-test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "erikabrahamson",
+    "password": "900411",
+    "database": "crud-hats-production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
