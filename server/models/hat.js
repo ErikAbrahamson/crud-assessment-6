@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Hat = sequelize.define('Hat', {
-    price: DataTypes.STRING,
+    price: DataTypes.INTEGER,
     popular: DataTypes.BOOLEAN
   }, {
     classMethods: {

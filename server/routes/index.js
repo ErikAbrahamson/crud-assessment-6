@@ -7,11 +7,35 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/hats', function(req, res) {
-  models.Todo.findAll({})
+  models.Hat.findAll({})
     .then(function(hats) {
       res.json(hats);
     });
 });
+
+router.get('/hats/:id', function(req, res) {
+  models.Hat.find({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(hat) {
+    res.json(hat);
+  });
+});
+
+router.post('/hats', function(req, res) {
+  models.Hat.create({
+    price: req.body.price,
+    popular: req.body.popular,
+    color: {
+      primary: req.body.primary,
+      mixed: req.body.mixed
+    }
+  }).then(function(hat) {
+    res.json(hat);
+  });
+});
+
 router.post('/brands', function(req, res) {
   models.Brand.create({
     name: req.body.name
